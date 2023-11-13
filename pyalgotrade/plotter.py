@@ -204,6 +204,23 @@ class MACDMarker(HistogramMarker):
         return ret
 
 
+class GuppyShortMarker(LineMarker):
+    def __init__(self):
+        super(GuppyShortMarker, self).__init__()
+        self.__marker = " "
+
+    def getColor(self):
+        return 'c'
+
+class GuppyLongMarker(LineMarker):
+    def __init__(self):
+        super(GuppyLongMarker, self).__init__()
+        self.__marker = " "
+
+    def getColor(self):
+        return 'r'
+
+
 class Subplot(object):
     """ """
     colors = ['b', 'c', 'm', 'y', 'k']

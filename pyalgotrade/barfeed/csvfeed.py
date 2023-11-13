@@ -134,6 +134,7 @@ class BarFeed(membf.BarFeed):
             open(path, "r"), fieldnames=rowParser.getFieldNames(), delimiter=rowParser.getDelimiter()
         )
         for row in reader:
+            print(row)
             bar_ = parse_bar(row)
             if bar_ is not None and (self.__barFilter is None or self.__barFilter.includeBar(bar_)):
                 loadedBars.append(bar_)
